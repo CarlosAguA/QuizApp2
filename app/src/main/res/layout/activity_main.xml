@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="carlosdeveloper.com.quizapp2.MainActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        >
+        <!-- Parent Linear Layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/turbine"
+                android:scaleType="fitXY"
+                android:paddingBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/quiz_info"
+                android:textSize= "18sp"
+                android:textStyle="italic"
+                android:layout_marginBottom="15dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/border"/>
+
+            <!-- Question 1-->
+            <TextView
+                style="@style/TextViews"
+                android:text="@string/question_one"/>
+            <GridLayout
+                style="@style/grid_style">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:text="@string/ans_1_a"
+                    android:id="@+id/cb_one_solar"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ans_1_b"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:id="@+id/cb_one_biogas"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ans_1_c"
+                    android:layout_column="1"
+                    android:layout_row="0"
+                    android:id="@+id/cb_one_geoth"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="1"
+                    android:text="@string/ans_1_d"
+                    android:id="@+id/cb_one_oil"/>
+
+
+            </GridLayout>
+
+            <!-- Question 2-->
+            <TextView
+                style="@style/TextViews"
+                android:text="@string/question_two"/>
+            <GridLayout
+                style="@style/grid_style">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:text="@string/ans_2_a"
+                    android:id="@+id/cb_two_gas"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:text="@string/ans_2_b"
+                    android:id="@+id/cb_two_hyd"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="0"
+                    android:text="@string/ans_2_c"
+                    android:id="@+id/cb_two_wind"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="1"
+                    android:text="@string/ans_2_d"
+                    android:id="@+id/cb_two_coal"/>
+
+            </GridLayout>
+
+            <!-- Question 3-->
+            <TextView
+                style="@style/TextViews"
+                android:text="@string/question_three" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/answer"
+                android:id="@+id/turbine_input"/>
+
+
+
+            <!-- Question 4-->
+            <TextView
+                style="@style/TextViews"
+                android:text="@string/question_four"
+                android:id="@+id/tv_qfour"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/answer"
+                android:id="@+id/panel_input" />
+
+
+
+            <!-- Question 5-->
+            <TextView
+                style="@style/TextViews"
+                android:text="@string/question_five"
+                android:id="@+id/tv_qfive"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/answer"
+                android:id="@+id/atomic_input"/>
+
+
+
+            <!-- Question 6-->
+            <TextView
+                style="@style/TextViews"
+                android:text="@string/question_six"/>
+
+            <LinearLayout
+                style="@style/linear_style">
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/rg_question_six">
+
+                    <RadioButton
+                        android:id="@+id/button1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="solar energy"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/button2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="wind energy"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/button3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="oil"
+                        />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- Question 7-->
+            <TextView
+                style="@style/TextViews"
+                android:text="@string/question_seven"/>
+            <LinearLayout
+                style="@style/linear_style">
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ans_7_a"
+                    android:id="@+id/cb_seven_plug"/>
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ans_7_b"
+                    android:id="@+id/cb_seven_truck"/>
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ans_7_c"
+                    android:id="@+id/cb_seven_lights"/>
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ans_7_d"
+                    android:id="@+id/cb_seven_read"/>
+
+            </LinearLayout>
+
+            <!-- Submit button -->
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textAllCaps="true"/>
+
+            <!-- Reset button -->
+            <Button
+                android:id="@+id/reset_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="reset"
+                android:textAllCaps="true"
+                android:onClick="resetQuiz"/>
+
+            <!-- End Parent Linear Layout-->
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

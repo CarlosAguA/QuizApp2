@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Quiz App 2</string>
+
+    <string name="question_one">1.Which are renewable energy sources?</string>
+    <string name="question_two">2.Which are non-renewable energy sources?</string>
+    <string name="question_three">3.What´s the object´s name that tranforms wind energy to electrical energy? </string>
+    <string name="question_four">4.What´s the object´s that tranforms solar energy to electrical energy?</string>
+    <string name="question_five">5.What´s the name of a dangerous and radioactive source of energy?</string>
+    <string name="question_six">6.What´s the most used energy source nowadays?</string>
+    <string name="question_seven">7.Which are some ways to save energy</string>
+    <string name="quiz_info">This is a quiz related to Energy. Nowadays, many changes in the world are taking
+                            place.We must be conscious that any action in our environment has a consequence, and the excessive use of some of
+                            these energies will condition the life of future generations on the Earth.</string>
+    <string name="answer" >Answer</string>
+
+    <!-- Question 1 Answer options  -->
+    <string name ="ans_1_a"> Solar energy </string>
+    <string name ="ans_1_b"> Biogas </string>
+    <string name ="ans_1_c"> Geothermal energy </string>
+    <string name ="ans_1_d"> Oil </string>
+
+    <!-- Question 2 Answer options  -->
+    <string name ="ans_2_a"> Natural gas</string>
+    <string name ="ans_2_b"> Hydraulic energy </string>
+    <string name ="ans_2_c"> Wind Energy </string>
+    <string name ="ans_2_d"> Coal </string>
+
+    <!-- Question 3 Answer options  -->
+    <string name ="three_option1">turbine</string>
+    <string name ="three_option2">wind turbine</string>
+
+
+    <!-- Question 7 Answer options  -->
+    <string name ="ans_7_a"> Plug out devices when they are in standby mode.</string>
+    <string name ="ans_7_b"> Buying a 400hp truck just for having fun.  </string>
+    <string name ="ans_7_c"> Turning out lights when nobody is at a room.</string>
+    <string name ="ans_7_d"> Reading about more ways to save energy. </string>
+
+</resources>
