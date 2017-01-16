@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int score = 0 ;
+    int score; ;
     /*Question 1 variables */
     boolean solarOne, geothermalOne, bioGasOne, oilOne ;
     CheckBox cb_solarOne, cb_geoth_One, cb_biogasOne, cb_oilOne ;
@@ -24,17 +24,14 @@ public class MainActivity extends AppCompatActivity {
     TextView questionFive, questionFour , questionThree;
     /*Question 6 variables */
     RadioGroup rbMostUsedEnergy ; // Radio Group that contains options for question 6
-    int rb_controller = 0 ;
+    int selector;
     /*Question 7 variables */
     boolean plugSeven , truckSeven , lightSeven, readSeven ;
     CheckBox cb_plug , cb_truck, cb_light , cb_read ;
     /*Submit Button*/
     Button submit ;
-    String summary = "Wrong answers:\n ";
+    String summary = "Wrong answer numbers:\n ";
 
-     String track = "hola" ;
-
-    int selector = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
         rbMostUsedEnergy.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-
                 switch (checkedId) {
                     case R.id.button1:
 
@@ -87,9 +83,8 @@ public class MainActivity extends AppCompatActivity {
                             summary = summary + "6\n";
                         }
                         if (selector == 3){
-                            score = score - 1 ;
+                            score--;
                         }
-
                         selector = 1;
                         break;
                     case R.id.button2:
@@ -98,17 +93,13 @@ public class MainActivity extends AppCompatActivity {
                             summary = summary + "6\n";
                         }
                         if (selector == 3){
-                            score = score - 1 ;
+                            score--;
                         }
-
                         selector = 2;
                         break;
                     case R.id.button3:
                         if (selector == 0 || selector == 1 || selector == 2) {
-                            score = score + 1;
-                           // track.replace("o","e");
-                           // Log.d("RESULTADO", track);
-                            //Why replace is ignored?
+                            score++;
                             summary.replace("6\n", "");
                         }
                         selector = 3;
@@ -148,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         readSeven = cb_read.isChecked();
 
         if (readSeven && lightSeven && plugSeven) {
-            score = score + 1;
+            score++;
         }else{
             summary = summary + "7\n";
         }
@@ -164,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(atomic.equals("atomic") || atomic.equals("atomic energy") || atomic.equals("nuclear energy")
                 || atomic.equals("nuclear")) {
-            score = score + 1;
+            score++;
         }else{
             summary = summary + "5\n";
         }
@@ -179,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("QUESTION FOUR", panel) ;
 
         if(panel.equals("panel") || panel.equals("solar panel") || panel.equals("solar cell")) {
-            score = score + 1;
+            score++;
         }else{
             summary = summary + "4\n";
         }
@@ -193,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("QUESTION THRRE", turbine) ;
 
         if(turbine.equals("turbine") || turbine.equals("wind turbine")) {
-            score = score + 1;
+            score++;
         }else{
             summary = summary + "3\n";
         }
@@ -209,8 +200,8 @@ public class MainActivity extends AppCompatActivity {
         hydraulicTwo = cb_hydraulicTwo.isChecked();
         coalTwo = cb_coalTwo.isChecked();
 
-        if (coalTwo && gasTwo) {
-            score = score + 1;
+        if (coalTwo && gasTwo && !hydraulicTwo && !windTwo ) {
+            score++;
         }else{
             summary = summary + "2\n";
         }
@@ -225,9 +216,9 @@ public class MainActivity extends AppCompatActivity {
         geothermalOne = cb_geoth_One.isChecked();
         oilOne = cb_oilOne.isChecked();
 
-        if(solarOne && geothermalOne & bioGasOne)
+        if(solarOne && geothermalOne && bioGasOne && !oilOne)
         {
-            score = score + 1;
+            score++;
         }else{
             summary = summary + "1\n";
         }
@@ -263,7 +254,7 @@ public class MainActivity extends AppCompatActivity {
 
         rbMostUsedEnergy.clearCheck();
 
-        summary = "Wrong answers:\n ";
+        summary = "Wrong answer numbers:\n ";
     }
 
 }

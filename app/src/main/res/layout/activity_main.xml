@@ -14,7 +14,7 @@
         android:id="@+id/ScrollView01"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
-        >
+
         <!-- Parent Linear Layout-->
         <LinearLayout
             android:layout_width="match_parent"
@@ -127,51 +127,38 @@
             <TextView
                 style="@style/TextViews"
                 android:text="@string/question_three" />
-
-
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/answer"
                 android:id="@+id/turbine_input"/>
 
-
-
             <!-- Question 4-->
             <TextView
                 style="@style/TextViews"
                 android:text="@string/question_four"
                 android:id="@+id/tv_qfour"/>
-
-
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/answer"
                 android:id="@+id/panel_input" />
 
-
-
             <!-- Question 5-->
             <TextView
                 style="@style/TextViews"
                 android:text="@string/question_five"
                 android:id="@+id/tv_qfive"/>
-
-
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/answer"
                 android:id="@+id/atomic_input"/>
 
-
-
             <!-- Question 6-->
             <TextView
                 style="@style/TextViews"
                 android:text="@string/question_six"/>
-
             <LinearLayout
                 style="@style/linear_style">
                 <RadioGroup
